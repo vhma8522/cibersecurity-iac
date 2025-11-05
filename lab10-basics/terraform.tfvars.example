@@ -1,6 +1,6 @@
 ## Example values for the S3 bucket template
 
-bucket_name = "my-unique-bucket-name-12345"
+bucket_name = "lab10-bucket-secure"
 region = "us-east-1"
 versioning_enabled = true
 force_destroy = false

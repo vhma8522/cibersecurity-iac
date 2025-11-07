@@ -15,3 +15,11 @@ Orden de variables
 5. *.tfvars no cargado -var-file=
 6. *.auto.tfvars or *.auto.tfvars.json
 7. -var and -var-file
+
+#tryvy
+output to html
+trivy image --format template --template "@contrib/html.tpl" --output trivy-report.html node14-class
+
+#Zap
+https://www.zaproxy.org/download/
+docker pull ghcr.io/zaproxy/zaproxy:stable

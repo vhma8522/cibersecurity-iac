@@ -16,6 +16,10 @@ Orden de variables
 6. *.auto.tfvars or *.auto.tfvars.json
 7. -var and -var-file
 
+#docker
+docker build . -t node14-class
+docker run node14-class
+
 #tryvy
 output to html
 trivy image --format template --template "@contrib/html.tpl" --output trivy-report.html node14-class

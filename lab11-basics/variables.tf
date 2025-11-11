@@ -19,7 +19,7 @@ variable "region" {
 variable "bucket_name" {
   description = "Bucket seguro"
   type        = string
-  default     = "lab10-bucket-secure"
+  default     = "lab10-bucket-secure-01"
 }
 
 variable "acl" {

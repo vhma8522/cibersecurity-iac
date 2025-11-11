@@ -1,0 +1,8 @@
+1. Intalar node version y node 16
+    1. Git page: https://github.com/coreybutler/nvm-windows
+        https://github.com/coreybutler/nvm-windows
+2. Instalar Juicy shop
+    1. docker run --rm -p 3000:3000 bkimminich/juice-shop
+1. Instalar Zap from docker
+    docker pull ghcr.io/zaproxy/zaproxy:stable
+    docker pull zaproxy/zap-stable

@@ -6,3 +6,9 @@
 1. Instalar Zap from docker
     docker pull ghcr.io/zaproxy/zaproxy:stable
     docker pull zaproxy/zap-stable
+4. crear un archivo directorio
+    docker run -v ${PWD}:/zap/wrk/:rw -t zaproxy/zap-stable zap.sh ...
+5. Ip de zap
+    docker run -p 8090:8090 -i zaproxy/zap-stable zap.sh -daemon -port 8090 -host 0.0.0.0
+5. create una red con docker
+    docker network create zapnet

@@ -1,0 +1,50 @@
+{
+  "info": {
+    "name": "JWT API Demo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login (Obtener Token)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"user@example.com\",\n  \"userId\": \"123\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:4000/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": ["login"]
+        }
+      }
+    },
+    {
+      "name": "Secure Data (Requiere JWT)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:4000/secure/data",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": ["secure", "data"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}

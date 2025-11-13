@@ -1,0 +1,24 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jwt-api
+    environment:
+      - PORT=4000
+      - JWT_SECRET=super-secreto-largo-y-unico
+    ports:
+      - "4000:4000"     # ⛔ Aquí exponemos el puerto 4000
+    command: ["node", "server.js"]
+    restart: unless-stopped
+
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jwt-client
+    depends_on:
+      - api
+    environment:
+      - BASE_URL=http://api:4000  # ⛔ Aquí apuntamos al servicio 'api' en el puerto 4000
+    command: ["node", "client.js"]

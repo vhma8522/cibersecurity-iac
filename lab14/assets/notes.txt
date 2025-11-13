@@ -1,0 +1,10 @@
+1. Clonar el repositorio:
+https://github.com/digininja/DVWA
+ 
+2. ejecutar comando
+cp config/config.inc.php.dist config/config.inc.php
+ 
+3. docker compose up -d
+4. ingresar a la pagina http://localhost:4280/
+5. Oprimir create database
+4. usuario admin/password
